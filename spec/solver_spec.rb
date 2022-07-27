@@ -2,11 +2,18 @@ require_relative './../solver'
 
 describe 'Solver' do
   describe 'When testing factorial' do
-    it 'Factorial test' do
+    it 'Factorial test for positive number' do
       number = 5
       solver = Solver.new
       factorial = solver.factorial(number)
       expect(factorial).to eq(120)
+    end
+
+    it 'Factorial test for zero' do
+      number = 0
+      solver = Solver.new
+      factorial = solver.factorial(number)
+      expect(factorial).to eq(1)
     end
   end
 
