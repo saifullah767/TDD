@@ -20,33 +20,42 @@ describe 'Solver' do
   end
 
   describe 'When testing fizzbuzz' do
-    it 'fizzbuzz correct' do
+    solver = Solver.new
+
+    describe 'fizzbuzz test' do
       number = 15
-      solver = Solver.new
       str_value = solver.fizzbuzz(number)
-      expect(str_value).to eq('fizzbuzz')
+
+      it 'fizzbuzz correct' do
+        expect(str_value).to eql('fizzbuzz')
+      end
     end
 
-    it 'fizz correct' do
+    describe 'fizz test' do
       number = 3
-      solver = Solver.new
       str_value = solver.fizzbuzz(number)
-      expect(str_value).to eq('fizz')
+
+      it 'fizz correct' do
+        expect(str_value).to eql('fizz')
+      end
     end
 
-    it 'buzz correct' do
+    describe 'buzz test' do
       number = 5
-      solver = Solver.new
       str_value = solver.fizzbuzz(number)
-      expect(str_value).to eq('buzz')
+
+      it 'buzz correct' do
+        expect(str_value).to eql('buzz')
+      end
     end
 
-    it 'any other number' do
+    describe 'other options test' do
       number = 4
-      solver = Solver.new
       str_value = solver.fizzbuzz(number)
-      expect(str_value).to eq('4')
+
+      it 'any other number' do
+        expect(str_value).to eql('4')
+      end
     end
   end
-
 end
